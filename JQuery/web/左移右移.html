@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select  id="zuo" multiple style="width: 100px;height: 100px" >
+    <option>香港</option>
+    <option>澳门</option>
+    <option>台湾</option>
+</select>
+
+<select  id="you" multiple style="width: 100px;height: 100px">
+</select>
+<script>
+    $(function () {
+        $("#zuo").on('dblclick','option',function () {
+            $("#you").append($(this));
+        });
+        $("#you").on('dblclick','option',function () {
+            $("#zuo").append($(this));
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var person ={name:"张三","age":22,'gender':"男"};
+    for (var key in person){
+        alert(key+":"+person[key]);
+    }
+    alert(person);
+    var persons = [{"name":"张三","age":22,"gender":"男"},
+                {"name":"李四","age":30,"gender":"男"},
+                {"name":"王五","age":32,"gender":"女"},
+                {"name":"麻溜","age":63,"gender":"女"}];
+    for (var i = 0; i <persons.length ; i++) {
+        for (var key in persons[i]){
+            alert(key+":"+persons[i][key])
+        }
+    }
+</script>
+</html>

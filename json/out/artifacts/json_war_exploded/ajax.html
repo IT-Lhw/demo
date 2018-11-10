@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<input type="button" value="点我试试。" onclick="fun();">
+<input type="text" id="text">
+</body>
+<script>
+        function fun() {
+            var value =$("#text").val();
+            $.ajax({
+                url:"ajaxServlet",
+                type:"get",
+                data:{username:"张三",age:22,gender:"女",value:value},
+                success:function (data) {
+                    alert(data);
+                }
+            });
+
+        }
+</script>
+</html>

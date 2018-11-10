@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js">
+    </script>
+</head>
+<body>
+<ul id="ul">
+    <li>花</li>
+    <li>鸟</li>
+    <li>鱼</li>
+    <li>虫</li>
+</ul>
+<table border="1px" style="width: 200px;height: 300px">
+    <tr>
+        <td><input type="checkbox" id="checkbox"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr><tr>
+        <td><input type="checkbox" name="check"></td>
+        <td><input type="checkbox" name="check"></td>
+        <td><input type="checkbox" name="check"></td>
+        <td><input type="checkbox" name="check"></td>
+    </tr><tr>
+        <td><input type="checkbox" name="check"></td>
+        <td><input type="checkbox" name="check"></td>
+        <td><input type="checkbox" name="check"></td>
+        <td><input type="checkbox" name="check"></td>
+    </tr><tr>
+        <td><input type="checkbox" name="check"></td>
+        <td><input type="checkbox" name="check"></td>
+        <td><input type="checkbox" name="check"></td>
+        <td><input type="checkbox" name="check"></td>
+    </tr><tr>
+        <td><input type="checkbox" name="check"></td>
+        <td><input type="checkbox" name="check"></td>
+        <td><input type="checkbox" name="check"></td>
+        <td><input type="checkbox" name="check"></td>
+    </tr>
+</table>
+<input type="button" id="button" value="点我换肤">
+<input type="button" id="but" value="点我">
+<script>
+    $(function () {
+        $("#ul").on("click","li",function () {
+            alert($(this).html());
+        });
+        $("#but").click(function () {
+            var v = $("<li >熊猫</li>");
+            $("#ul").append(v)
+        });
+        $("#button").click(function () {
+            $("tr:even").css("backgroundColor","pink");
+            $("tr:odd").css("backgroundColor","red");
+        })
+        $("#checkbox").click(function () {
+            var v =$(this).prop("checked");
+            $("input[name=check]").prop("checked",v);
+        })
+    });
+</script>
+</body>
+</html>
